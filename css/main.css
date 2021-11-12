@@ -132,7 +132,7 @@ nav {
 }
 
 .nav-links>li {
-    background-image: url("images/watercolor-bg-white.png");
+    background-image: url("../images/watercolor-bg-white.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
