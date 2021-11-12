@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/Helvetica_Neue/HelveticaNeueLTStdBd.otf') format('otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-SemiBold.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf') format('ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito/Nunito-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito/Nunito-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/Open_Sans/OpenSans-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway/Raleway-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway/Raleway-ExtraBold.ttf') format('ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+:root {
+    /*backgrounds*/
+    --bg-accent: rgba(20, 21, 50, 100);
+    --bg-accent-50: rgba(20, 21, 50, 50);
+    --bg-accent-90: rgba(20, 21, 50, 90);
+    --bg-accent-95: rgba(20, 21, 50, 95);
+
+    --bg-picture: rgba(186, 184, 184, 100);
+
+    --bg-main: rgba(215, 215, 215, 100);
+
+    /*text*/
+    --text-medium: rgba(144, 144, 144, 100);
+    --text-unselected: rgba(82, 82, 82, 100);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    height: 2000px;
+    background-color: var(--bg-main);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    background-color: var(--bg-main);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.logo-container,
+.nav-links {
+    display: flex;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo-container>img {
+    margin-left: 20px;
+    width: 15vw;
+    min-width: 110px;
+}
+
+.nav-bar {
+    flex: 2;
+    white-space: nowrap;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px;
+}
+
+.nav-links>li {
+    background-image: url("/images/watercolor-bg-white.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 5px;
+}
+
+.nav-link {
+    color: var(--text-medium);
+    font-size: 1.5vw;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.hero {
+    display: flex;
+}
+
+#left-hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--bg-main);
+    flex-direction: column;
+}
+
+#left-hero::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+    background-color: var(--bg-main);
+    transform-origin: bottom left;
+    transform: skew(-20deg, 0deg);
+}
+
+#hero-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 5vw;
+    margin: 10px;
+    color: white;
+}
+
+#hero-watercolor {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    margin: 10px;
+    color: var(--text-medium);
+}
+
+#right-hero {
+    background-color: var(--bg-picture);
+    z-index: -2;
+    width: 50%;
+}
+
+#right-hero>img {
+    width: 100%;
+}
+
+#the-artist {
+    background-color: var(--bg-accent);
+    color: white;
+    padding: 1vw;
+}
+
+.section-header {
+    text-align: center;
+    margin: 1vw;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#the-artist>p {
+    margin: 2vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+
+#works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.work {
+    text-align: center;
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    padding: 0.3vw;
+}
+
+.work-title {
+    font-weight: 700;
+}
+
+.work-description {
+    font-size: 0.8vw;
+    margin: 0.2vw;
+}
+
+.work-size {
+    font-size: 0.8vw;
+    margin: 0.2vw;
+}
+
+.work-text {
+    background-color: white;
+    padding: 1vw;
+}
+
+.work-big {
+    grid-column: span 3;
+    font-size: 1.5vw;
+}
+
+.work-small>img {
+    width: 100%;
+}
+
+.work-big>img {
+    width: 100%;
+}
