@@ -92,17 +92,26 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     height: 2000px;
     background-color: var(--bg-main);
+    margin: auto;
 }
 
 nav {
+    width: 100%;
+    background-color: var(--bg-main);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: .3vw;
+    max-height: 100px;
+}
+
+.nav-container {
     display: flex;
     width: 100%;
     margin: auto;
     align-items: center;
     background-color: var(--bg-main);
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    padding: .3vw;
 }
 
 .logo-container,
@@ -114,8 +123,8 @@ nav {
     flex: 1;
 }
 
-.logo-container>img {
-    margin-left: 20px;
+.logo-container img {
+    margin-left: 10%;
     width: 15vw;
     min-width: 110px;
 }
@@ -123,6 +132,8 @@ nav {
 .nav-bar {
     flex: 2;
     white-space: nowrap;
+    max-width: 1400px;
+    margin-right: 5%;
 }
 
 .nav-links {
@@ -131,21 +142,22 @@ nav {
     margin: 10px;
 }
 
-.nav-links>li {
+.nav-links li {
     background-image: url("../images/watercolor-bg-white.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0px 5px;
+    padding: 0px max(2%, 5px);
 }
 
 .nav-link {
     color: var(--text-medium);
-    font-size: 1.5vw;
+    font-size: min(1.5vw, 50px);
     text-decoration: none;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: bold;
     margin: 20px;
+    vertical-align: middle;
 }
 
 .hero {
@@ -198,7 +210,7 @@ nav {
     width: 50%;
 }
 
-#right-hero>img {
+#right-hero img {
     width: 100%;
 }
 
@@ -211,22 +223,22 @@ nav {
 .section-header {
     text-align: center;
     margin: 1vw;
-    font-size: 2vw;
+    font-size: min(2vw, 40px);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-#the-artist>p {
-    margin: 2vw;
+#the-artist p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.5vw;
-    line-height: 2.5vw;
+    font-size: min(1.5vw, 25px);
+    line-height: min(2.5vw, 40px);
+    max-width: min(80%, 1600px);
+    margin: 2vw auto 2vw auto;
 }
 
-#works-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+#works {
+    max-height: calc(100vh-100px);
 }
 
 .work {
@@ -234,8 +246,6 @@ nav {
     font-size: 1.2vw;
     text-decoration: none;
     color: black;
-    height: 100%;
-    padding: 0.3vw;
 }
 
 .work-title {
@@ -257,15 +267,20 @@ nav {
     padding: 1vw;
 }
 
-.work-big {
-    grid-column: span 3;
-    font-size: 1.5vw;
+.splide__slide img {
+    width: auto;
+    height: 90%;
 }
 
-.work-small>img {
-    width: 100%;
+.splide__slide {
+    opacity: 0.3;
+    text-align: center;
 }
 
-.work-big>img {
-    width: 100%;
+.splide__slide.is-active {
+    opacity: 1;
+}
+
+#thumbnail-slider {
+    margin-top: 10px;
 }
