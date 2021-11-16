@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         rewind: true,
         pagination: false,
         arrows: true,
-        fixedHeight: '90vh',
+        fixedHeight: '100vh',
     });
 
     var thumbnails = new Splide('#thumbnail-slider', {
