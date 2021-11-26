@@ -90,9 +90,9 @@ img {
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    height: 2000px;
     background-color: var(--bg-main);
     margin: auto;
+    max-width: 1200px;
 }
 
 nav {
@@ -103,6 +103,8 @@ nav {
     z-index: 2;
     padding: .3vw;
     max-height: 100px;
+    border-bottom: 2px solid var(--bg-picture);
+    /*with or without*/
 }
 
 .nav-container {
@@ -125,25 +127,24 @@ nav {
 
 .logo-container img {
     margin-left: 10%;
-    width: 15vw;
+    width: 10vw;
     min-width: 110px;
 }
 
 .nav-bar {
     flex: 2;
     white-space: nowrap;
-    max-width: 1400px;
-    margin-right: 5%;
+    max-width: 1200px;
+    margin-right: 0%;
 }
 
 .nav-links {
-    justify-content: space-around;
+    justify-content: flex-end;
     list-style: none;
     margin: 10px;
 }
 
 .nav-links li {
-    background-image: url("../images/watercolor-bg-white.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -152,7 +153,7 @@ nav {
 
 .nav-link {
     color: var(--text-medium);
-    font-size: min(1.5vw, 50px);
+    font-size: min(1.5vw, 20px);
     text-decoration: none;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: bold;
@@ -160,8 +161,22 @@ nav {
     vertical-align: middle;
 }
 
+.nav-link:hover {
+    color: white;
+}
+
+.color-active {
+    color: white;
+}
+
+.bg-active {
+    background-image: url("../images/watercolor-bg-blue.png");
+}
+
 .hero {
     display: flex;
+    max-height: 590px;
+    overflow: hidden;
 }
 
 #left-hero {
@@ -178,10 +193,10 @@ nav {
     content: "";
     position: absolute;
     display: block;
-    width: 200%;
+    width: 100%;
     height: 100%;
     top: 0;
-    left: -100%;
+    left: 0;
     z-index: -1;
     background-color: var(--bg-main);
     transform-origin: bottom left;
@@ -191,15 +206,15 @@ nav {
 #hero-name {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 5vw;
+    font-size: min(5vw, 50px);
     margin: 10px;
-    color: white;
+    color: black;
 }
 
 #hero-watercolor {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    font-size: 2vw;
+    font-size: min(2vw, 20px);
     margin: 10px;
     color: var(--text-medium);
 }
@@ -208,10 +223,15 @@ nav {
     background-color: var(--bg-picture);
     z-index: -2;
     width: 50%;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 #right-hero img {
     width: 100%;
+}
+
+main {
+    background-color: var(--bg-main);
 }
 
 #the-artist {
@@ -222,13 +242,14 @@ nav {
 .section {
     text-align: center;
     padding: 2vw 2vw 3vw 2vw;
+    scroll-margin-top: 2vw;
 }
 
 .section-header {
     text-align: center;
-    margin: 1vw;
+    margin: .5vw;
     padding: .5vw;
-    font-size: min(2vw, 40px);
+    font-size: min(2vw, 30px);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     display: inline-block;
@@ -243,10 +264,10 @@ nav {
 #the-artist p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: min(1.5vw, 25px);
-    line-height: min(2.5vw, 40px);
-    max-width: min(80%, 1600px);
-    margin: 2vw auto 2vw auto;
+    font-size: min(1.5vw, 18px);
+    line-height: min(2.5vw, 30px);
+    max-width: min(80%, 650px);
+    margin: .5vw auto 2vw auto;
     text-align: justify;
 }
 
@@ -274,6 +295,7 @@ nav {
 .work-text {
     background-color: white;
     padding: 1vw;
+    margin-top: 10px;
 }
 
 #main-slider {
@@ -281,8 +303,8 @@ nav {
 }
 
 .splide__slide img {
-    width: auto;
-    height: 90%;
+    width: 100%;
+    height: auto;
 }
 
 .splide__slide {
@@ -331,8 +353,8 @@ nav {
 .opinions-main p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: min(1.5vw, 25px);
-    line-height: min(2.5vw, 40px);
+    font-size: min(1.5vw, 18px);
+    line-height: min(2.5vw, 30px);
     text-align: justify;
 }
 
@@ -357,7 +379,7 @@ p.signature {
 }
 
 .exhibitions-title {
-    font-size: 1.3vw;
+    font-size: min(1.5vw, 25px);
     width: 100%;
     text-align: left;
     margin: 1.5vw 0;
@@ -386,12 +408,12 @@ p.signature {
 
 
 .exhibition-year {
-    font-size: 1vw;
+    font-size: min(1vw, 18px);
     margin-left: 1.5vw;
 }
 
 .exhibition-name {
-    font-size: 1.2vw;
+    font-size: min(1.2vw, 20px);
 }
 
 .exhibition-circle {
@@ -409,7 +431,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 footer a {
@@ -418,16 +439,16 @@ footer a {
 }
 
 .arrow-top {
-    font-size: 2vw;
+    font-size: min(1.2vw, 16px);
 }
 
 .back-to-top {
-    font-size: 1.2vw;
+    font-size: min(1.2vw, 16px);
     margin: .2vw auto 1vw auto;
 }
 
 .copyright {
-    font-size: 1vw;
+    font-size: min(1.2vw, 16px);
     margin: .5vw;
     font-weight: 700;
 }
@@ -435,5 +456,5 @@ footer a {
 .author {
     width: 100%;
     text-align: right;
-    font-size: 1vw;
+    font-size: min(1.2vw, 16px);
 }
