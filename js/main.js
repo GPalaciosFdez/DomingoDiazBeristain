@@ -29,26 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     thumbnails.mount();
 });
 
-function onScroll(event) {
-    var scrollPos = $(document).scrollTop();
-    $('li>a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('li>a.color-active').removeClass("color-active");
-            $('.bg-active').removeClass("bg-active");
-            currLink.addClass("color-active");
-            currLink.parent().addClass("bg-active");
-        } else {
-            currLink.removeClass("color-active");
-            currLink.parent().removeClass("color-active");
-        }
-    });
-}
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-});
-
 $('.nav-link').on("mouseover", function () {
     anime({
         targets: '.nav-links li:hover',
