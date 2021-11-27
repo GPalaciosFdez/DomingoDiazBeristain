@@ -57,11 +57,29 @@ $('.nav-link').on("mouseleave", function () {
     $('.nav-links li').css('background-size', 'cover');
 });
 
+let signatureAni = anime({
+    targets: '.logo-container img',
+    keyframes: [{
+            translateX: 300,
+            translateY: 300,
+            width: '40vw',
+            duration: 0
+        },
+        {
+            translateX: 0,
+            translateY: 0,
+            width: '10vw',
+            duration: 750,
+            easing: 'easeInOutSine'
+        }
+    ]
+});
+
 let leftHeroAni = anime({
     targets: '#left-hero',
     keyframes: [{
-            translateX: -200,
-            translateY: 200,
+            translateX: -500,
+            translateY: 500,
             duration: 0
         },
         {
@@ -70,14 +88,15 @@ let leftHeroAni = anime({
             duration: 300,
             easing: 'easeInOutSine'
         }
-    ]
+    ],
+    delay: 750
 });
 
 let rightHeroAni = anime({
     targets: '#right-hero',
     keyframes: [{
-            translateX: 200,
-            translateY: -200,
+            translateX: 500,
+            translateY: -500,
             duration: 0
         },
         {
@@ -86,13 +105,14 @@ let rightHeroAni = anime({
             duration: 300,
             easing: 'easeInOutSine'
         }
-    ]
+    ],
+    delay: 750
 });
-
+/*
 let artistPAni = anime({
     targets: ['#the-artist p', '#the-artist .section-header'],
     keyframes: [{
-            translateX: -500,
+            translateX: -1000,
             translateY: 0,
             opacity: 0,
             duration: 0,
@@ -105,9 +125,9 @@ let artistPAni = anime({
             easing: 'easeInOutSine'
         }
     ],
-    delay: 400
+    delay: 1300
 });
-
+*/
 let artistBgAni = anime({
     targets: ['#the-artist'],
     keyframes: [{
@@ -116,8 +136,9 @@ let artistBgAni = anime({
         },
         {
             translateY: 0,
-            duration: 500,
+            duration: 750,
             easing: 'easeInOutSine'
         }
-    ]
+    ],
+    delay: 1000
 });
