@@ -273,7 +273,7 @@ main {
 
 .work {
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 1vw;
     text-decoration: none;
     color: black;
 }
@@ -284,7 +284,7 @@ main {
 
 .work-description {
     font-size: 0.8vw;
-    margin: 0.2vw;
+    /*margin: 0.2vw;*/
 }
 
 .work-size {
@@ -296,6 +296,33 @@ main {
     background-color: white;
     padding: 1vw;
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.work-chars {
+    width: 50%;
+    align-items: center;
+    align-self: center;
+    text-align: left;
+}
+
+.work-description:hover {
+    width: 50%;
+    align-items: center;
+    align-self: center;
+    visibility: visible;
+}
+
+.work-descriptions {
+    align-items: center;
+    align-self: center;
+    visibility: visible;
+    font-size: 0.8vw;
+    margin: 0.2vw;
+    width: 90%;
+    text-align: justify;
 }
 
 #main-slider {

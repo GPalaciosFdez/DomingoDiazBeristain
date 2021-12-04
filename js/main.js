@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         type: 'fade',
         rewind: true,
         pagination: false,
-        arrows: true
+        arrows: false
     });
 
     var thumbnails = new Splide('#thumbnail-slider', {
@@ -60,8 +60,8 @@ $('.nav-link').on("mouseleave", function () {
 let signatureAni = anime({
     targets: '.logo-container img',
     keyframes: [{
-            translateX: 300,
-            translateY: 300,
+            translateX: 200,
+            translateY: 200,
             width: '40vw',
             duration: 0
         },
@@ -69,10 +69,11 @@ let signatureAni = anime({
             translateX: 0,
             translateY: 0,
             width: '10vw',
-            duration: 750,
+            duration: 1000,
             easing: 'easeInOutSine'
         }
-    ]
+    ],
+    delay: 150
 });
 
 let leftHeroAni = anime({
@@ -85,11 +86,11 @@ let leftHeroAni = anime({
         {
             translateX: 0,
             translateY: 0,
-            duration: 300,
+            duration: 750,
             easing: 'easeInOutSine'
         }
     ],
-    delay: 750
+    delay: 1000
 });
 
 let rightHeroAni = anime({
