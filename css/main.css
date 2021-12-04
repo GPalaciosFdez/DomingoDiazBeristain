@@ -242,7 +242,7 @@ main {
 .section {
     text-align: center;
     padding: 2vw 2vw 3vw 2vw;
-    scroll-margin-top: 2vw;
+    /*scroll-margin-top: .05vw;*/
 }
 
 .section-header {
@@ -254,6 +254,10 @@ main {
     font-weight: 700;
     display: inline-block;
     letter-spacing: .4vw;
+}
+
+#works-header {
+    margin-top: 0;
 }
 
 .with-border {
