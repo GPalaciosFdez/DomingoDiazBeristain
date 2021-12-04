@@ -306,6 +306,7 @@ main {
     align-items: center;
     align-self: center;
     text-align: left;
+    margin-left: .5vw;
 }
 
 .work-descriptions {
