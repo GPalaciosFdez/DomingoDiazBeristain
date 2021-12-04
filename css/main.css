@@ -284,12 +284,12 @@ main {
 
 .work-description {
     font-size: 0.8vw;
-    /*margin: 0.2vw;*/
+    margin-top: 0.2vw;
 }
 
 .work-size {
     font-size: 0.8vw;
-    margin: 0.2vw;
+    margin-top: 0.2vw;
 }
 
 .work-text {
@@ -308,20 +308,13 @@ main {
     text-align: left;
 }
 
-.work-description:hover {
-    width: 50%;
-    align-items: center;
-    align-self: center;
-    visibility: visible;
-}
-
 .work-descriptions {
     align-items: center;
     align-self: center;
     visibility: visible;
     font-size: 0.8vw;
     margin: 0.2vw;
-    width: 90%;
+    width: 80%;
     text-align: justify;
 }
 
@@ -373,7 +366,7 @@ main {
 }
 
 .opinion {
-    margin: 10px;
+    margin: 20px;
     padding: 2vw;
 }
 
