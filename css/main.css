@@ -247,7 +247,7 @@ main {
 
 .section-header {
     text-align: center;
-    margin: .5vw;
+    margin: 1.5vw;
     padding: .5vw;
     font-size: min(2vw, 30px);
     font-family: 'Montserrat', sans-serif;
@@ -403,11 +403,12 @@ p.signature {
     width: 100%;
     text-align: left;
     margin: 1.5vw 0;
+    margin-left: 1.7vw;
     font-weight: 700;
 }
 
 .exhibitions-main {
-    border-left: white .2vw solid;
+    border-left: white .1vw solid;
 }
 
 .exhibition {
@@ -439,9 +440,9 @@ p.signature {
 .exhibition-circle {
     background-color: white;
     border-radius: 50%;
-    height: 1vw;
-    width: 1vw;
-    margin-left: -1.1vw;
+    height: .5vw;
+    width: .5vw;
+    margin-left: -.8vw;
 }
 
 footer {
