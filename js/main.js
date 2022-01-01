@@ -29,12 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
     thumbnails.mount();
 });
 
-$(".toggle-text-btn a").on('click', function() {
-    let parent = $(this).parent();
-    let sibling = $(this).parent().siblings(".toggle-text-btn");
-    $(this).parent().siblings(".extra-text").fadeToggle(400, function() {
-        parent.toggle();
-        sibling.toggle();
+$(function() {
+    $(".toggle-text-btn a").on('click', function() {
+        let parent = $(this).parent();
+        let sibling = $(this).parent().siblings(".toggle-text-btn");
+        $(this).parent().siblings(".extra-text").fadeToggle(400, function() {
+            parent.toggle();
+            sibling.toggle();
+        });
     });
 });
 
