@@ -61,18 +61,14 @@
     font-style: normal;
 }
 
-
 :root {
     /*backgrounds*/
     --bg-accent: rgba(20, 21, 50, 100);
     --bg-accent-50: rgba(20, 21, 50, 50);
     --bg-accent-90: rgba(20, 21, 50, 90);
     --bg-accent-95: rgba(20, 21, 50, 95);
-
     --bg-picture: rgba(186, 184, 184, 100);
-
     --bg-main: rgba(215, 215, 215, 100);
-
     /*text*/
     --text-medium: rgba(144, 144, 144, 100);
     --text-unselected: rgba(82, 82, 82, 100);
@@ -388,6 +384,21 @@ p.signature {
     margin: 10px;
 }
 
+.toggle-text-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    color: var(--text-medium);
+}
+
+.toggle-text-btn a {
+    cursor: pointer;
+}
+
+.extra-text {
+    display: inline-block;
+}
+
 #exhibitions .section-header {
     color: var(--bg-accent);
 }
@@ -432,7 +443,6 @@ p.signature {
 .last-exhibition {
     margin-bottom: 0px;
 }
-
 
 .exhibition-year {
     font-size: min(1vw, 18px);

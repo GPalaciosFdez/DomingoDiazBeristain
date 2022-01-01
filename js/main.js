@@ -1,6 +1,6 @@
 var exports = {};
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var main = new Splide('#main-slider', {
         type: 'fade',
         rewind: true,
@@ -29,7 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
     thumbnails.mount();
 });
 
-$('.nav-link').on("mouseover", function () {
+$(".toggle-text-btn a").on('click', function() {
+    let parent = $(this).parent();
+    let sibling = $(this).parent().siblings(".toggle-text-btn");
+    $(this).parent().siblings(".extra-text").fadeToggle(400, function() {
+        parent.toggle();
+        sibling.toggle();
+    });
+});
+
+
+$('.nav-link').on("mouseover", function() {
     anime({
         targets: '.nav-links li:hover',
         keyframes: [{
@@ -50,7 +60,7 @@ $('.nav-link').on("mouseover", function () {
     })
 });
 
-$('.nav-link').on("mouseleave", function () {
+$('.nav-link').on("mouseleave", function() {
     $('.nav-links li').css('background', 'transparent');
     $('.nav-links li').css('background-position', 'center');
     $('.nav-links li').css('background-repeat', 'no-repeat');
@@ -109,26 +119,7 @@ let rightHeroAni = anime({
     ],
     delay: 750
 });
-/*
-let artistPAni = anime({
-    targets: ['#the-artist p', '#the-artist .section-header'],
-    keyframes: [{
-            translateX: -1000,
-            translateY: 0,
-            opacity: 0,
-            duration: 0,
-        },
-        {
-            translateX: 0,
-            opacity: 100,
-            duration: 500,
-            //easing: 'spring(1, 50, 20, 10)' // mass, stiffness, damping, velocity
-            easing: 'easeInOutSine'
-        }
-    ],
-    delay: 1300
-});
-*/
+
 let artistBgAni = anime({
     targets: ['#the-artist'],
     keyframes: [{
