@@ -377,6 +377,7 @@ main {
     font-size: min(1.5vw, 18px);
     line-height: min(2.5vw, 30px);
     text-align: justify;
+    display: inline-block;
 }
 
 p.signature {
