@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     main.sync(thumbnails);
     main.mount();
     thumbnails.mount();
+
+    //main.on("click", function(){
+    //    console.log("Is working!");
+    //})
 });
 
 $(function() {
@@ -135,4 +139,8 @@ let artistBgAni = anime({
         }
     ],
     delay: 1000
+});
+
+var lightbox = new SimpleLightbox('.work', {
+    'captionPosition': 'outside'
 });
